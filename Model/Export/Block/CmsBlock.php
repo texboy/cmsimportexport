@@ -25,17 +25,6 @@ class CmsBlock extends AbstractEntity
     protected $_permanentAttributes = [BlockStoreModifier::STORE_ID_COLUMN];
 
     /**
-     * Disabled attributes
-     *
-     * @var string[]
-     */
-    protected $_disabledAttributes = [
-        BlockInterface::BLOCK_ID,
-        BlockInterface::CONTENT,
-        BlockInterface::TITLE
-    ];
-
-    /**
      * @var AttributeCollectionProvider
      */
     private $attributeCollectionProvider;
