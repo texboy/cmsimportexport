@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Export -->
+    <preference for="Texboy\CmsImportExport\Model\Export\Block\BlockCollectionFactoryInterface" type="Texboy\CmsImportExport\Model\Export\Block\BlockCollectionFactory"/>
+    <type name="Texboy\CmsImportExport\Model\Export\Filter\FilterProcessorAggregator">
+        <arguments>
+            <argument name="handler" xsi:type="array">
+                <item name="int" xsi:type="object">Texboy\CmsImportExport\Model\Export\Filter\Types\IntFilter</item>
+                <item name="varchar" xsi:type="object">Texboy\CmsImportExport\Model\Export\Filter\Types\VarcharFilter</item>
+            </argument>
+        </arguments>
+    </type>
+
+    <preference for="Texboy\CmsImportExport\Model\Export\Page\PageCollectionFactoryInterface" type="Texboy\CmsImportExport\Model\Export\Page\PageCollectionFactory"/>
+
+</config>

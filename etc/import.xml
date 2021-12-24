@@ -1,0 +1,7 @@
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_ImportExport:etc/import.xsd">
+    <entity name="cms_block" label="Cms Block" model="Texboy\CmsImportExport\Model\Import\Block\CmsBlock"
+            behaviorModel="Texboy\CmsImportExport\Model\Import\Behavior\Custom" />
+    <entity name="cms_page" label="Cms Page" model="Texboy\CmsImportExport\Model\Import\Page\CmsPage"
+            behaviorModel="Texboy\CmsImportExport\Model\Import\Behavior\Custom" />
+</config>
