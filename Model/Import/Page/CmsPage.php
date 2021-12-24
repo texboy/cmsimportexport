@@ -186,9 +186,6 @@ class CmsPage extends AbstractEntity
         if (!$storeIds) {
             $this->addRowError('StoreIdsIsRequired', $rowNum);
         }
-        if (!$isActive) {
-            $this->addRowError('IsActiveIsRequired', $rowNum);
-        }
 
         if (isset($this->_validatedRows[$rowNum])) {
             return !$this->getErrorAggregator()->isRowInvalid($rowNum);
@@ -219,10 +216,6 @@ class CmsPage extends AbstractEntity
         $this->addMessageTemplate(
             'StoreIdsIsRequired',
             __('Store ids cannot be empty.')
-        );
-        $this->addMessageTemplate(
-            'IsActiveIsRequired',
-            __('IsActive cannot be empty.')
         );
     }
 }
